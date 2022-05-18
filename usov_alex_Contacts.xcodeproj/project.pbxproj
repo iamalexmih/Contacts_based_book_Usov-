@@ -14,6 +14,7 @@
 		B5079261283563720022615E /* usov_alex_Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B507925F283563720022615E /* usov_alex_Contacts.xcdatamodeld */; };
 		B5079263283563740022615E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5079262283563740022615E /* Assets.xcassets */; };
 		B5079266283563740022615E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5079264283563740022615E /* LaunchScreen.storyboard */; };
+		B585794C28356F3A0019E170 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585794B28356F3A0019E170 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B5079262283563740022615E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5079265283563740022615E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5079267283563740022615E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B585794B28356F3A0019E170 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		B5079255283563720022615E /* usov_alex_Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				B507926D283565C90022615E /* Model */,
 				B5079256283563720022615E /* AppDelegate.swift */,
 				B5079258283563720022615E /* SceneDelegate.swift */,
 				B507925A283563720022615E /* ViewController.swift */,
@@ -68,6 +71,14 @@
 				B507925F283563720022615E /* usov_alex_Contacts.xcdatamodeld */,
 			);
 			path = usov_alex_Contacts;
+			sourceTree = "<group>";
+		};
+		B507926D283565C90022615E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B585794B28356F3A0019E170 /* Contact.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				B507925B283563720022615E /* ViewController.swift in Sources */,
 				B5079257283563720022615E /* AppDelegate.swift in Sources */,
+				B585794C28356F3A0019E170 /* Contact.swift in Sources */,
 				B5079259283563720022615E /* SceneDelegate.swift in Sources */,
 				B5079261283563720022615E /* usov_alex_Contacts.xcdatamodeld in Sources */,
 			);
