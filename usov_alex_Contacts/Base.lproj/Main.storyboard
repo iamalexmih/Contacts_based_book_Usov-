@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oJt-sf-XI8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="qLg-RW-M4P"/>
@@ -25,27 +25,33 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7w-kY-Z76">
-                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KxA-PV-uXH"/>
-                                    <barButtonItem title="Item" id="gcd-9i-14U"/>
+                                    <barButtonItem title="Создать контакт" id="gcd-9i-14U">
+                                        <connections>
+                                            <action selector="showNewContactAlert" destination="BYZ-38-t0r" id="tlI-ep-KMk"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oJt-sf-XI8" secondAttribute="bottom" id="2Tc-hs-Y2m"/>
                             <constraint firstItem="Y7w-kY-Z76" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BwR-95-Dgv"/>
                             <constraint firstItem="oJt-sf-XI8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C3V-bg-quz"/>
                             <constraint firstItem="Y7w-kY-Z76" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iIf-t6-TUM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y7w-kY-Z76" secondAttribute="bottom" id="kCU-qI-dfw"/>
                             <constraint firstItem="oJt-sf-XI8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kh3-ee-ubJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oJt-sf-XI8" secondAttribute="trailing" id="rHA-O8-yW3"/>
-                            <constraint firstAttribute="bottom" secondItem="Y7w-kY-Z76" secondAttribute="bottom" id="s3x-BU-TtB"/>
                             <constraint firstItem="Y7w-kY-Z76" firstAttribute="top" secondItem="oJt-sf-XI8" secondAttribute="bottom" id="xg9-6b-sfT"/>
                         </constraints>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="oJt-sf-XI8" id="0Bq-eK-kDI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
