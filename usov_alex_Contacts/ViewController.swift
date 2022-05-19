@@ -10,22 +10,26 @@ import UIKit
 class ViewController: UIViewController {
     
     let cellID = "contactCellIdentifier"
+    var storageUserDefault: ContactStorageProtocol!
     
     private var contacts = [ContactProtocol]() {
         didSet {
+            storageUserDefault.save(contacts: contacts)
             contacts.sort { $0.title < $1.title }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        storageUserDefault = ContactStorage()
         loadContacts()
     }
 
     private func loadContacts() { // заполнить массив номерами
-        contacts.append(Contact(title: "Alex", phone: "+79381234433"))
-        contacts.append(Contact(title: "Den", phone: "+79996385190"))
-        contacts.append(Contact(title: "Bro", phone: "+79246889749"))
+        contacts = storageUserDefault.load()
+//        contacts.append(Contact(title: "Alex", phone: "+79381234433"))
+//        contacts.append(Contact(title: "Den", phone: "+79996385190"))
+//        contacts.append(Contact(title: "Bro", phone: "+79246889749"))
     }
 
     @IBOutlet var tableView: UITableView!
